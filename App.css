@@ -1,0 +1,186 @@
+body {
+    background: url(https://png.pngtree.com/background/20210712/original/pngtree-mathematics-education-calculator-ruler-hand-drawn-background-picture-image_1178879.jpg);
+    /* background: url(https://cdn.pixabay.com/photo/2018/04/21/11/26/poppy-3338249_960_720.jpg); */
+    background-repeat: no-repeat;
+
+
+    /* background-image: linear-gradient(to left top, #dce5f4, #a7b8bf, #7c8b8a, #58605a, #363732); */
+    /* background-image: linear-gradient(to left top, #c46881, #eb8075, #ffa464, #fdd05d, #e3ff72); */
+    background-size: cover;
+    background-position: fixed;
+    box-sizing: border-box;
+    /* background-color: palevioletred; */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.151);
+    box-shadow: 0 8px 32px 0 rgba(55, 56, 70, 0.096);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#calculator {
+    width: 300px;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 25px;
+
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 8px 32px 0 rgba(81, 80, 82, 0.26);
+    backdrop-filter: blur(500px);
+    -webkit-backdrop-filter: blur(500px);
+    border-radius: 10px;
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+
+    position:relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform:perspective(1000px);
+}
+
+#disp {
+    min-height: 70px;
+    width: 100%;
+    text-align: right;
+    margin: 10px;
+    padding-right: 20px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.233);
+    box-shadow: 0 8px 45px 0 rgba(12, 11, 11, 0.164);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(10, 5, 5, 0.726);
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 270px;
+    /* border: 1px solid black;
+  border-top: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    align-content: stretch;
+    /* background: rgba(255, 255, 255, 0.671);
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.24);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18); */
+    /* color: rgba(255, 255, 255, 0.726); */
+    /* padding: 10px; */
+    gap: 5px;
+}
+
+.button {
+    outline: 0;
+    border: 1px solid rgba(27, 27, 27, 0.233);
+    background: rgba(255, 255, 255, 0.377);
+    /* box-shadow: 0 8px 32px 0 rgba(102, 102, 101, 0.459); */
+    box-shadow: 0 8px 45px 0 rgba(7, 6, 6, 0.233);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 50%;
+    color: rgba(10, 5, 5, 0.856);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    outline: none;
+    /* color: rgba(255, 255, 255, 0.726); */
+}
+
+.button:hover, .button:focus{
+    transform: scaleY(1.1);
+    transform-origin: left;
+    transition: all 300ms ease-in-out;
+    box-shadow: 0 18px 45px 0 rgba(65, 59, 59, 0.514);
+    background: rgba(255, 255, 255, 0.616);
+    border:none;
+    outline: none;
+}
+
+.button:focus{
+    
+    animation-name: click;
+    animation-duration: 400ms;
+
+}
+
+@keyframes click {
+    0%{
+        transform: scaleY(0.98);
+    }
+
+    100%{
+        transform: scaleY(1.1);
+    }
+}
+
+.wrapper button:first-child {
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-radius: 10px;
+    background-color: rgba(230, 13, 13, 0.178);
+
+}
+
+.wrapper button:nth-child(15) {
+
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    border-radius: 10px;
+    margin: 1%;
+    background-color:rgba(0, 255, 255, 0.253);
+
+}
+
+.wrapper button:nth-child(16) {
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-radius: 10px;
+    margin: 1%;
+
+}
+
+
+
+.inp {
+
+    display: block;
+    margin: 0;
+    font-size: 20px;
+    margin: 1%;
+
+}
+
+.exp {
+
+    color: rgb(131, 37, 37);
+    font-size: 18px;
+
+}
